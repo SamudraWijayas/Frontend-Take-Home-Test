@@ -7,7 +7,7 @@
 
 A modern invoicing and customer management dashboard built with Next.js App Router. Features include customer listings, invoice CRUD (create/read/update/view), dashboard with revenue charts and summary cards, using mock data.
 
-## 🚀 Local Setup & Run
+## Local Setup & Run
 
 ### Prerequisites
 
@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 | `npm run start` | Run built app          |
 | `npm run lint`  | Lint code with ESLint  |
 
-## 📱 Key Features & Routes
+## Key Features & Routes
 
 - **Dashboard** `/` – Revenue charts (Recharts), summary cards, recent invoices table.
 - **Customers** `/customers` – List & detail view.
@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 - Dark mode toggle (Tailwind).
 - Responsive UI components.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category      | Tech                              | Version   | Purpose                           |
 | ------------- | --------------------------------- | --------- | --------------------------------- |
@@ -59,7 +59,7 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 
 **Dev Deps**: `@tailwindcss/postcss`, `@types/*`.
 
-## 🤔 Why This Stack?
+## Why This Stack?
 
 - **Next.js 16 App Router**: Modern routing, server components/actions for better perf/SEO. Chosen for full-stack capabilities without extra setup.
 - **React Query + TanStack Table**: Handles complex data flows (invoices/customers sync) efficiently. Query for API mocking/real backend integration.
@@ -67,7 +67,7 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 - **Tailwind v4**: Fast prototyping, consistent design system, built-in dark mode for pro dashboard feel.
 - **Recharts/Zustand**: Lightweight for charts/state; avoids heavy alternatives like Redux.
 
-## ⚠️ Challenges
+## Challenges
 
 1. **Data Synchronization**: Balancing React Query caching with Zustand UI state – solved with query invalidation on mutations.
 2. **Table Performance**: TanStack Table handles 1000+ rows with virtualization, but large datasets need debounced search.
@@ -75,7 +75,7 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 4. **Mock to Production**: Current mock data (`src/mocks/data.ts`); real API integration requires service updates (`src/service/invoice.service.ts`).
 5. **Dark Mode**: Tailwind class strategy ensures seamless toggle without layout shifts.
 
-## 📝 Next Steps
+## Next Steps
 
 - Replace mocks with real backend (e.g., Supabase/Stripe).
 - Add auth (NextAuth).
