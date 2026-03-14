@@ -1,0 +1,1 @@
+All steps complete. Task done: Zustand UI store with theme/sidebar, persisted to localStorage, integrated in DashboardLayout. Server state unchanged (TanStack Query). Run `cd my-app && npm run dev` to test toggles/persistence.

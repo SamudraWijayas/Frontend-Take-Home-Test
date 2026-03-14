@@ -1,0 +1,118 @@
+export const customers = [
+  {
+    id: "cust-01",
+    name: "PT Maju Bersama",
+    email: "finance@majubersama.co.id",
+    plan: "business",
+  },
+  {
+    id: "cust-02",
+    name: "PT Nusantara Cloud",
+    email: "billing@nusantaracloud.id",
+    plan: "startup",
+  },
+  {
+    id: "cust-03",
+    name: "PT Digital Solusi",
+    email: "finance@digitalsolusi.id",
+    plan: "enterprise",
+  },
+];
+
+export const invoices = [
+  {
+    id: "INV-2024-001",
+    customer_id: "cust-01",
+    status: "paid",
+    amount: 2450000,
+    due_date: "2024-12-31",
+    items: [
+      { name: "Compute 4vCPU", qty: 30, unit: "days", price: 50000 },
+      { name: "Storage SSD", qty: 200, unit: "GB", price: 2000 },
+    ],
+  },
+  {
+    id: "INV-2024-002",
+    customer_id: "cust-02",
+    status: "unpaid",
+    amount: 1250000,
+    due_date: "2024-12-20",
+    items: [{ name: "Compute 2vCPU", qty: 20, unit: "days", price: 30000 }],
+  },
+  {
+    id: "INV-2024-003",
+    customer_id: "cust-03",
+    status: "overdue",
+    amount: 3200000,
+    due_date: "2024-11-30",
+    items: [
+      { name: "Managed Database", qty: 1, unit: "month", price: 1500000 },
+      { name: "Backup Storage", qty: 500, unit: "GB", price: 1000 },
+    ],
+  },
+  {
+    id: "INV-2024-004",
+    customer_id: "cust-01",
+    status: "draft",
+    amount: 950000,
+    due_date: "2024-12-25",
+    items: [{ name: "Bandwidth", qty: 5, unit: "TB", price: 190000 }],
+  },
+  {
+    id: "INV-2024-005",
+    customer_id: "cust-01",
+    status: "draft",
+    amount: 950000,
+    due_date: "2024-12-25",
+    items: [{ name: "Bandwidth", qty: 5, unit: "TB", price: 190000 }],
+  },
+  {
+    id: "INV-2024-006",
+    customer_id: "cust-01",
+    status: "draft",
+    amount: 950000,
+    due_date: "2024-12-25",
+    items: [{ name: "Bandwidth", qty: 5, unit: "TB", price: 190000 }],
+  },
+  {
+    id: "INV-2024-007",
+    customer_id: "cust-02",
+    status: "paid",
+    amount: 1800000,
+    due_date: "2024-12-15",
+    items: [{ name: "Compute 8vCPU", qty: 15, unit: "days", price: 120000 }],
+  },
+  {
+    id: "INV-2024-008",
+    customer_id: "cust-03",
+    status: "unpaid",
+    amount: 2200000,
+    due_date: "2024-12-28",
+    items: [{ name: "GPU Instance", qty: 10, unit: "days", price: 220000 }],
+  },
+  {
+    id: "INV-2024-009",
+    customer_id: "cust-01",
+    status: "overdue",
+    amount: 750000,
+    due_date: "2024-12-10",
+    items: [{ name: "Storage HDD", qty: 500, unit: "GB", price: 1500 }],
+  },
+  {
+    id: "INV-2024-010",
+    customer_id: "cust-02",
+    status: "draft",
+    amount: 1400000,
+    due_date: "2024-12-30",
+    items: [{ name: "Managed Kafka", qty: 1, unit: "month", price: 1400000 }],
+  },
+  {
+    id: "INV-2024-011",
+    customer_id: "cust-03",
+    status: "paid",
+    amount: 2900000,
+    due_date: "2024-12-05",
+    items: [{ name: "Enterprise Support", qty: 1, unit: "year", price: 2900000 }],
+  },
+];
+
