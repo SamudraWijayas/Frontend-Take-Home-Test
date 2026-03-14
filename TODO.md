@@ -1,1 +1,11 @@
-All steps complete. Task done: Zustand UI store with theme/sidebar, persisted to localStorage, integrated in DashboardLayout. Server state unchanged (TanStack Query). Run `cd my-app && npm run dev` to test toggles/persistence.
+# Task Complete ✅
+
+README.md created with:
+
+- Cara run project locally
+- Daftar tech stack
+- Penjelasan singkat alasan pemilihan & challenging parts
+
+**You can delete this TODO.md now.**
+
+Run: `cd my-app && npm run dev`
