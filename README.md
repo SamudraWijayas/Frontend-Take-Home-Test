@@ -81,4 +81,3 @@ Open [http://localhost:3000](http://localhost:3000) – Dashboard loads automati
 - Add auth (NextAuth).
 - Deploy: Vercel (one-click from GitHub).
 
-Built with ❤️ using Next.js create-next-app template.
