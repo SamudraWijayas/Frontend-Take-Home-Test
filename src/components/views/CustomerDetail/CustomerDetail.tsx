@@ -23,11 +23,11 @@ export default function CustomerProfilePage() {
   return (
     <div className="w-full space-y-6">
       {/* Profile Header */}
-      <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm p-6 border border-gray-200 dark:border-gray-800">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-200 mb-2">
           {customer.name}
         </h1>
-        <p className="text-xl text-gray-600 mb-4">{customer.email}</p>
+        <p className="text-xl text-gray-600 dark:text-gray-200 mb-4">{customer.email}</p>
         <span className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
           Plan: {customer.plan}
         </span>
@@ -49,9 +49,9 @@ export default function CustomerProfilePage() {
       </div>
 
       {/* Invoices Table */}
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm overflow-hidden">
         <div className="p-6">
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold dark:text-gray-200">
             Invoice History ({invoicesData.total})
           </h2>
         </div>

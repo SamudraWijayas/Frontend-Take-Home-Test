@@ -3,23 +3,37 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 interface UIState {
   darkMode: boolean;
-  isSidebarCollapsed: boolean;
+
+  // sidebar state
+  sidebarOpen: boolean; // mobile
+  sidebarCollapsed: boolean; // desktop
+
   toggleTheme: () => void;
   toggleSidebar: () => void;
+  toggleCollapse: () => void;
 }
 
 export const useUIStore = create(
   persist<UIState>(
     (set) => ({
       darkMode: false,
-      isSidebarCollapsed: false,
+
+      sidebarOpen: false,
+      sidebarCollapsed: false,
+
       toggleTheme: () =>
         set((state) => ({
           darkMode: !state.darkMode,
         })),
+
       toggleSidebar: () =>
         set((state) => ({
-          isSidebarCollapsed: !state.isSidebarCollapsed,
+          sidebarOpen: !state.sidebarOpen,
+        })),
+
+      toggleCollapse: () =>
+        set((state) => ({
+          sidebarCollapsed: !state.sidebarCollapsed,
         })),
     }),
     {

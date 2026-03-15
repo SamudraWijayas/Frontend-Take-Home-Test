@@ -32,10 +32,12 @@ export default function RevenueChart({ data }: { data: InvoiceItem[] }) {
   const COLORS = ["#22c55e", "#facc15", "#ef4444", "#6b7280"];
 
   return (
-    <div className="bg-white p-4 border border-gray-200 rounded">
-      <h2 className="mb-4 font-semibold">Invoice Status Distribution</h2>
+    <div className="bg-white dark:bg-gray-900 p-4 border border-gray-200 dark:border-gray-800 rounded-xl">
+      <h2 className="mb-4 font-semibold text-gray-800 dark:text-gray-200">
+        Invoice Status Distribution
+      </h2>
 
-      <div style={{ width: "100%", height: 300 }}>
+      <div className="w-full h-[300px]">
         <ResponsiveContainer>
           <PieChart>
             <Pie
@@ -49,7 +51,15 @@ export default function RevenueChart({ data }: { data: InvoiceItem[] }) {
                 <Cell key={index} fill={COLORS[index]} />
               ))}
             </Pie>
-            <Tooltip />
+
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#111827",
+                border: "none",
+                borderRadius: "8px",
+                color: "#fff",
+              }}
+            />
           </PieChart>
         </ResponsiveContainer>
       </div>

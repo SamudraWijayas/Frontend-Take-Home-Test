@@ -51,12 +51,14 @@ export default function DashboardPage() {
     (i) => i.due_date && new Date(i.due_date).getMonth() === currentMonth,
   ).length;
 
-
   return (
-    <div className=" space-y-8">
+    <div className="space-y-8">
       {/* HEADER */}
       <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Dashboard
+        </h1>
+
         <p className="text-gray-500 dark:text-gray-400">
           Overview of your billing performance
         </p>
@@ -66,28 +68,28 @@ export default function DashboardPage() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <SummaryCard title="Invoice This Month" value={totalThisMonth} />
 
-        <SummaryCard
-          title="Total Unpaid"
-          value={convertIDR(unpaidAmount)}
-        />
+        <SummaryCard title="Total Unpaid" value={convertIDR(unpaidAmount)} />
 
         <SummaryCard title="Overdue Invoices" value={overdue} />
 
-        <SummaryCard
-          title="Total Revenue"
-          value={convertIDR(totalRevenue)}
-        />
+        <SummaryCard title="Total Revenue" value={convertIDR(totalRevenue)} />
       </div>
 
       {/* CHART */}
       <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="font-semibold mb-4">Revenue Overview</h2>
+        <h2 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          Revenue Overview
+        </h2>
+
         <RevenueChart data={invoices} />
       </div>
 
       {/* RECENT INVOICES */}
       <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-        <h2 className="font-semibold mb-4">Recent Invoices</h2>
+        <h2 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">
+          Recent Invoices
+        </h2>
+
         <InvoiceTable data={invoices.slice(0, 5)} />
       </div>
     </div>
